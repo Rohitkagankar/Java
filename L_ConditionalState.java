@@ -48,5 +48,29 @@ public class L_ConditionalState {
             tax=(int)(income *0.3);
         }
         System.out.println("your tax is: "+tax);
+
+        //largest among three numbers
+
+        int x=10,y=20,z=30;
+        if(x>=y && x>=z){
+            System.out.println("the largest is = "+x );
+        }
+        else if(y>=z){
+            System.out.println("the largest is = "+y );
+        }
+        else{
+            System.out.println("the largest is = "+z );
+        }
+
+        //ternary operator
+        int larger=y>x? y:x;
+        System.out.println(larger);
+        String check=x%2==0? "Even":"Odd";
+        System.out.println(check);
+
+        int mark=50;
+        String status=mark>=33? "Pass":"Fail";
+        System.out.println(status);
+
     }
 }
