@@ -19,5 +19,15 @@ public class k_Operaters {
         System.out.println(a>b);
         System.out.println(a>=b);
         System.out.println(a<=b);
+        //logical operators
+        if(a>10 && b<10){
+            System.out.println("ok");
+            if(a==20 || b==5){
+                System.out.println("hello");
+                if(a!=30){
+                    System.out.println("false");
+                }
+            }
+        }
     }
 }
