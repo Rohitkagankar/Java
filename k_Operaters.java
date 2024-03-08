@@ -13,5 +13,11 @@ public class k_Operaters {
         System.out.println(d);
         System.out.println(e);
         System.out.println(f);
+        System.out.println(a==b);
+        System.out.println(a!=b);
+        System.out.println(a<b);
+        System.out.println(a>b);
+        System.out.println(a>=b);
+        System.out.println(a<=b);
     }
 }
