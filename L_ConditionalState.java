@@ -72,5 +72,50 @@ public class L_ConditionalState {
         String status=mark>=33? "Pass":"Fail";
         System.out.println(status);
 
+        //switch case
+        int nums=2;
+        switch (nums) {
+            case 1:
+            System.out.println("Case 1 ");
+                break;
+            case 2:
+            System.out.println("Case 2 ");
+                break;
+            case 3:
+            System.out.println("Case 3 ");
+                break;
+            default:
+            System.out.println(" Non Case is true. ");
+                
+                
+        }
+        //calculator
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter first Number: ");
+        int num1=s.nextInt();
+        System.out.println("Enter second Number: ");
+        int num2=s.nextInt();
+        System.out.println("Enter operator: ");
+        Character operator=s.next().charAt(0);
+        switch (operator) {
+            case '+':
+                System.out.println("Sum is : "+(num1+num2));
+                break;
+            case '-':
+                System.out.println("Sum is : "+(num1-num2));
+                break;
+            case '*':
+                System.out.println("Sum is : "+(num1*num2));
+                break;
+            case '/':
+                System.out.println("Sum is : "+(num1/num2));
+                break;
+            case '%':
+                System.out.println("Sum is : "+(num1%num2));
+                break;
+            default:
+                System.out.println("you choose wrong.");
+                break;
+        }
     }
 }
