@@ -1,4 +1,4 @@
-public class k_Operaters {
+public class K_Operaters {
     public static void main(String[] args) {
         int a= 20;
         int b =3;
@@ -11,6 +11,7 @@ public class k_Operaters {
         int e=++d;
         int f = d++;
         System.out.println(d);
+        System.out.println(!(d==10));
         System.out.println(e);
         System.out.println(f);
         System.out.println(a==b);
