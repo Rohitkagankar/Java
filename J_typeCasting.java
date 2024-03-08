@@ -10,5 +10,7 @@ public class J_typeCasting {
         int num = ch2;
         System.out.println(number);
         System.out.println(num);
+        int $ = 24;
+        System.out.println($);
     }
 }
