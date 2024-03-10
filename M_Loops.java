@@ -53,5 +53,57 @@ public class M_Loops {
         n1=n1/10;  
     }
     System.out.println(rev);
+
+    //do while loop
+    int c=1;
+    do{
+        System.out.println("hello world");
+        c++;
+    }while(c<=10);
+
+    //break statement
+    for(int i=1; i<10; i++){
+        if(i==5){
+            break;
+        }
+        System.out.println(i);
+    }
+
+    //num multiple of 10 then exit the loop
+    System.out.println("enter the num: ");
+    do{
+        int n2=sc.nextInt();
+        if(n2 % 10 ==0){
+            break;
+        }
+        System.out.println(n2);
+    }while (true);
+
+    //continue
+    for (int i=1; i<=5; i++){
+        if(i==2){
+            continue;
+        }
+        System.out.println(i);
+    }
+
+
+    int n=sc.nextInt();
+    if(n==2){
+        System.out.println("the number is prime.");
+    }else{
+        boolean isprime=true;
+        for(int i=2; i<=Math.sqrt(n); i++){
+            if (n%i==0) {
+                isprime=false;
+            }
+        }
+        if(isprime==true){
+            System.out.println("the number is prime.");
+        }else{
+            System.out.println("the number is not prime.");
+        }
+    }
+
     }
 }
