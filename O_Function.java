@@ -35,12 +35,20 @@ public class O_Function {
         if(n==2){
             return true;
         }
-        for(int i=2; i<n; i++){
+        for(int i=2; i<=Math.sqrt(n); i++){
             if(n%i==0){
                 return false;
             }
         }
         return true;
+    }
+    public static void inRange(int n){
+        for(int i=2; i<=n; i++){
+            if(isPrime(i)){
+                System.out.print(i+" ");
+            }
+        }
+        System.out.println();
     }
     public static void main(String[] args) {
         printHello();
@@ -53,5 +61,6 @@ public class O_Function {
         System.out.println("factorial is "+fact);
         System.out.println(bionomial(5,2));
         System.out.println(isPrime(5));
+        inRange(20);
     }
 }
