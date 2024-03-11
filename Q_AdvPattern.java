@@ -96,6 +96,33 @@ public class Q_AdvPattern {
             System.out.println();
         }
     }
+    public static void solidRombus(int n){
+        for(int i=1; i<n; i++){
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            for(int j=1; j<=n; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    public static void hollowRom(int n){
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            for(int j=1; j<=n; j++){
+                if(i==1 || i==n || j==1 || j==n){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+            
+        }
+    }
     public static void main(String[] args) {
         hollow_pattern(4,5);
         reverse_half_pyramid(5);
@@ -103,5 +130,7 @@ public class Q_AdvPattern {
         FloidsTri(5);
         Trig01(5);
         Butterfly(4);
+        solidRombus(5);
+        hollowRom(5);
     }
 }
