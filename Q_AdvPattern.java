@@ -123,6 +123,52 @@ public class Q_AdvPattern {
             
         }
     }
+    public static void StarPat(int n){
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            for(int j=1; j<=(2*i)-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i=n; i>=1; i--){
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            for(int j=1; j<=(2*i)-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    public static void numPyr(int n){
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            for(int j=1; j<=i; j++){
+                System.out.print(i+" ");
+                
+            }
+            System.out.println();
+        }
+    }
+    public static void Pallindron(int n){
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            for(int j=i; j>=1; j--){
+                System.out.print(j);
+            }
+            for(int j=2; j<=i; j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         hollow_pattern(4,5);
         reverse_half_pyramid(5);
@@ -132,5 +178,8 @@ public class Q_AdvPattern {
         Butterfly(4);
         solidRombus(5);
         hollowRom(5);
+        StarPat(5);
+        numPyr(5);
+        Pallindron(5);
     }
 }
