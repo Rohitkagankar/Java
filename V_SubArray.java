@@ -52,11 +52,31 @@ public class V_SubArray {
         System.out.println("max pair sum is : "+maxSum);
     }
 
+    //kadense thm
+    public static void kadense(int array[]){
+        int max=Integer.MIN_VALUE;
+        int sum=0;
+        for(int i=0; i<array.length; i++){
+            sum=sum+array[i];
+            if(sum<0){
+                sum=0;
+            }
+            max=Math.max(max, sum);
+        }
+        System.out.println("max sum of subarray is : "+ max);
+    }
+
 
     public static void main(String[] args) {
         int array[]={2,4,6,8,10};
         subArray(array);
+
+        //prefix---------
         int arr[]={1,2,3,4,5};
         PresubArray(arr);
+
+        //kadense------
+        int arra[]={1,2,3,4,-5};
+        kadense(arra);
     }
 }
