@@ -17,6 +17,7 @@ public class B4_Loops {
     }
 
     System.out.println("Enter a number: ");
+    @SuppressWarnings("resource")
     Scanner sc = new Scanner(System.in);
     int num =sc.nextInt();
     counter= 1;

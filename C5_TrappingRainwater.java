@@ -1,4 +1,4 @@
-import java.util.*;
+
 public class C5_TrappingRainwater {
     public static void trapwater(int height[]){
         //calculate leftmax boundry array

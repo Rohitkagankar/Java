@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class B3_ConditionalState {
     public static void main(String[] args) {
         // int age=19;
+        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your age.");
         int age = sc.nextInt();
@@ -89,33 +90,34 @@ public class B3_ConditionalState {
                 
                 
         }
-        //calculator
-        Scanner s=new Scanner(System.in);
-        System.out.println("Enter first Number: ");
-        int num1=s.nextInt();
-        System.out.println("Enter second Number: ");
-        int num2=s.nextInt();
-        System.out.println("Enter operator: ");
-        Character operator=s.next().charAt(0);
-        switch (operator) {
-            case '+':
-                System.out.println("Sum is : "+(num1+num2));
-                break;
-            case '-':
-                System.out.println("Sum is : "+(num1-num2));
-                break;
-            case '*':
-                System.out.println("Sum is : "+(num1*num2));
-                break;
-            case '/':
-                System.out.println("Sum is : "+(num1/num2));
-                break;
-            case '%':
-                System.out.println("Sum is : "+(num1%num2));
-                break;
-            default:
-                System.out.println("you choose wrong.");
-                break;
+        try (//calculator
+        Scanner s = new Scanner(System.in)) {
+            System.out.println("Enter first Number: ");
+            int num1=s.nextInt();
+            System.out.println("Enter second Number: ");
+            int num2=s.nextInt();
+            System.out.println("Enter operator: ");
+            Character operator=s.next().charAt(0);
+            switch (operator) {
+                case '+':
+                    System.out.println("Sum is : "+(num1+num2));
+                    break;
+                case '-':
+                    System.out.println("Sum is : "+(num1-num2));
+                    break;
+                case '*':
+                    System.out.println("Sum is : "+(num1*num2));
+                    break;
+                case '/':
+                    System.out.println("Sum is : "+(num1/num2));
+                    break;
+                case '%':
+                    System.out.println("Sum is : "+(num1%num2));
+                    break;
+                default:
+                    System.out.println("you choose wrong.");
+                    break;
+            }
         }
     }
 }

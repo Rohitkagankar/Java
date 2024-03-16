@@ -1,4 +1,4 @@
-import java.util.*;
+
 public class B9_Arrays {
 
     //mark update in array-------

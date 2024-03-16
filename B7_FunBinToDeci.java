@@ -1,4 +1,4 @@
-import java.util.*;;
+
 
 public class B7_FunBinToDeci {
     public static void binToDeci(int binNo){
