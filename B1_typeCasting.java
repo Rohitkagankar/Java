@@ -1,4 +1,4 @@
-public class A10_typeCasting {
+public class B1_typeCasting {
     public static void main(String[] args) {
         float a =10.5f;
         int b = (int)a;

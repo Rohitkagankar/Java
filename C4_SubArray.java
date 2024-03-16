@@ -1,7 +1,7 @@
 /**
  * V_SubArray
  */
-public class A22_SubArray {
+public class C4_SubArray {
     public static void subArray(int array[]){
         int total=0;
         int maxSum=Integer.MIN_VALUE;

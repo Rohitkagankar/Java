@@ -1,4 +1,4 @@
-public class A24_maxProfit {
+public class C6_maxProfit {
     public static int buySellStock(int prices[]){
         int bprice=Integer.MAX_VALUE;
         int maxprofit=0;

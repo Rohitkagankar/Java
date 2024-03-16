@@ -1,5 +1,5 @@
 import java.util.*;
-public class A18_Arrays {
+public class B9_Arrays {
 
     //mark update in array-------
     public static void update(int m[],int nonchange){

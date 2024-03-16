@@ -1,4 +1,4 @@
-public class A26_selectionSort {
+public class C8_selectionSort {
     public static void SelectionSort(int array[]){
         for(int i=0; i<array.length-1; i++){
             int minPo=i;

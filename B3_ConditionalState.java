@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class A12_ConditionalState {
+public class B3_ConditionalState {
     public static void main(String[] args) {
         // int age=19;
         Scanner sc = new Scanner(System.in);

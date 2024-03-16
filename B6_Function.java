@@ -1,4 +1,4 @@
-public class A15_Function {
+public class B6_Function {
     public static void printHello(){
         System.out.println("hello world.");
         System.out.println("hello world.");
