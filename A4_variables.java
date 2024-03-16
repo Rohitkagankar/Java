@@ -1,4 +1,4 @@
-public class D_variables {
+public class A4_variables {
     public static void main(String[] args) {
         //primitive data types
         int a=10;

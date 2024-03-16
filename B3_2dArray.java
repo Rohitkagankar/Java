@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Z3_2dArray {
+public class B3_2dArray {
 
     public static boolean searchEle(int matrix[][],int key){
         for(int i=0; i<matrix.length; i++){

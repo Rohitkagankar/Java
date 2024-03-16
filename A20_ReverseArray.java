@@ -1,4 +1,4 @@
-public class T_ReverseArray {
+public class A20_ReverseArray {
     public static void Reverse(int arr[]){
         int start=0; int end=arr.length-1;
         while(start<end){

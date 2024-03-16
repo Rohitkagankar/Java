@@ -1,4 +1,4 @@
-public class S_BinarySearch {
+public class A19_BinarySearch {
 
     public static int binary(int array[],int key){
         int start=0; int end=array.length-1;

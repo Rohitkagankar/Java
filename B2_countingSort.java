@@ -1,4 +1,4 @@
-public class Z2_countingSort {
+public class B2_countingSort {
     public static void countSort(int arr[]){
         int larger=Integer.MIN_VALUE;
         for(int i=0; i<arr.length; i++){

@@ -1,6 +1,6 @@
 import java.util.*;;
 
-public class P_FunBinToDeci {
+public class A16_FunBinToDeci {
     public static void binToDeci(int binNo){
         int myNo=binNo;
         int pow=0;

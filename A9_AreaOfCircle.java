@@ -1,5 +1,5 @@
 import java.util.*;
-public class I_AreaOfCircle {
+public class A9_AreaOfCircle {
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
             float rad = sc.nextFloat();

@@ -1,4 +1,4 @@
-public class Z1_insertionSort {
+public class B1_insertionSort {
     public static void insertionSort(int arr[]){
         for(int i=1; i<arr.length; i++){
             int curr=arr[i];

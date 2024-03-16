@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class M_Loops {
+public class A13_Loops {
     public static void main(String[] args) {
     int count=0;
     while(count<10){

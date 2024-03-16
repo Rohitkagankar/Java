@@ -1,4 +1,4 @@
-public class U_PairsArr {
+public class A21_PairsArr {
 
     public static void pairs(int array[],int count){
         for(int i=0; i<array.length; i++){

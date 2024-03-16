@@ -1,7 +1,7 @@
 /**
  * Q_AdvPattern
  */
-public class Q_AdvPattern {
+public class A17_AdvPattern {
 
     public static void hollow_pattern(int row , int col){
         for(int i=1; i<=row; i++){

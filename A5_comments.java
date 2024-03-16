@@ -1,4 +1,4 @@
-public class E_comments {
+public class A5_comments {
     public static void main(String[] args) {
         //single line comment
         /* multiple line code

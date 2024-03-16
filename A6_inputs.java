@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class F_inputs {
+public class A6_inputs {
     public static void main(String[] args) {
         try (Scanner a = new Scanner(System.in)) {
             String input = a.next();
