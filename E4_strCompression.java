@@ -1,7 +1,7 @@
 public class E4_strCompression {
     public static String strCompression(String str){
         String newStr="";
-        for(int i=0; i<str.length(); i++){
+        for(int i=0; i<str.length(); i++){//O(n)
             Integer count=1;
             while(i<str.length()-1 && str.charAt(i)==str.charAt(i+1)){
                 count++;
@@ -15,7 +15,7 @@ public class E4_strCompression {
         return newStr;
     }
     public static void main(String[] args) {
-        String str="aabbbcccc";
+        String str="aabbbccdds";
         System.out.println(strCompression(str));
 
     }
