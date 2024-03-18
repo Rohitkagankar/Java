@@ -22,6 +22,12 @@ public class E6_bitEvenOrOdd {
         int bit=1<<i;
         return num | bit;
     }
+
+    //clear ith bit----
+    public static int clearBit(int num,int i){
+        int bitmask=~(1<<i);
+        return num & bitmask;
+    }
     public static void main(String[] args) {
         // int n=5;
         evenOdd(4);
@@ -31,5 +37,8 @@ public class E6_bitEvenOrOdd {
 
         //set ith position----
         System.out.println(setIthBit(10, 2));
+
+        //clear ith bit ----
+        System.out.println(clearBit(10, 1));
     }
 }
