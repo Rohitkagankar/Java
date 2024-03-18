@@ -16,9 +16,20 @@ public class E6_bitEvenOrOdd {
             return 1;
         }
     }
+
+    //set bit at i-th position-----
+    public static int setIthBit(int num,int i){
+        int bit=1<<i;
+        return num | bit;
+    }
     public static void main(String[] args) {
         // int n=5;
         evenOdd(4);
+
+        //get ith position
         System.out.println(getIthBit(10, 3));
+
+        //set ith position----
+        System.out.println(setIthBit(10, 2));
     }
 }
