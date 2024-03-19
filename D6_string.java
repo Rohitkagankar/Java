@@ -21,6 +21,7 @@ public class D6_string {
     public static void main(String[] args) {
         char ch[]={'a','b','c','d'};
         String name;
+        @SuppressWarnings("resource")
         Scanner sc=new Scanner(System.in);
         name=sc.nextLine();
         System.out.println(name);

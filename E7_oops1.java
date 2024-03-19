@@ -18,13 +18,14 @@ public class E7_oops1 {
         // b1.password="asdf";  not allow 
         b1.setPassword("abcd");
         System.out.println(b1.name);
+        
     }
 }
 class BankDetails{
     public String name;
     private String password;
     public void setPassword(String password) {
-        this.password = password;
+        this.password=password;
     }
 }
 
