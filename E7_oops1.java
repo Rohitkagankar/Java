@@ -6,9 +6,12 @@ public class E7_oops1 {
         p1.Pointer=5;
         System.out.println(p1.Pointer);
 
+        //getter and setters-----
         Student s1=new Student();
-        s1.name="rohit";
-        System.out.println(s1.name);
+        s1.setName("rohit");
+        System.out.println(s1.getName());
+        s1.setRollno(3266);
+        System.out.println(s1.getRollno());
 
         BankDetails b1=new BankDetails();
         b1.name="BOI";
@@ -36,10 +39,21 @@ class Pen{
     }
 }
 class Student{
-    String name;
-    int rollno;
+    private String name;
+    private int rollno;
     float cgpa;
-    void setName(String sname){
-        name=sname;
+    
+    String getName(){
+        return this.name;
     }
+    int getRollno(){
+        return this.rollno;
+    }
+    void setName(String name) {
+        this.name = name;
+    }
+    void setRollno(int rollno) {
+        this.rollno = rollno;
+    }
+
 }
