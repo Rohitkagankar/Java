@@ -3,19 +3,53 @@ public class E8_constructor {
 
 
         Student s1=new Student();
-        // System.out.println(s1.name);
+        Student s2=new Student("rohit");
+        Student s3=new Student(123);
+
+        s1.name="ranjit";
+        s1.rollno=123;
+        s1.password="abcd";
         
+        Student s5=new Student(s1);
+        s5.password="pqrs";
+        System.out.println(s5.name);
+        System.out.println(s5.rollno);
+        System.out.println(s5.password);
+
+        s1.marks[0]=100;
+        for(int i=0; i<s1.marks.length; i++){
+            System.out.println(s1.marks[i]);
+        }
+        for(int i=0; i<s5.marks.length; i++){
+            System.out.println(s5.marks[i]);
+        }
     }
 }
 
 class Student{
     String name;
     int rollno;
-    // Student(String name){
-    //     this.name=name;
-    // }
+    String password;
+    int marks[];
+
+    //copy constructor
+    Student(Student s1){
+        marks=new int[3];
+        this.name=s1.name;
+        this.rollno=s1.rollno;
+        this.marks=s1.marks;
+    }
     Student(){
         System.out.println("Constructor is called...");
+        marks=new int[3];
+    }
+    Student(String name){
+        this.name=name;
+        marks=new int[3];
+    }
+    Student(int rollno){
+        this.rollno=rollno;
+        marks=new int[3];
     }
     
 
