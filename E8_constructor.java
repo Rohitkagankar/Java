@@ -10,13 +10,15 @@ public class E8_constructor {
         s1.rollno=123;
         s1.password="abcd";
         
+        s1.marks[0]=100;
+        s1.marks[1]=90;
         Student s5=new Student(s1);
         s5.password="pqrs";
         System.out.println(s5.name);
         System.out.println(s5.rollno);
         System.out.println(s5.password);
-
-        s1.marks[0]=100;
+        s1.marks[2]=80;
+        
         for(int i=0; i<s1.marks.length; i++){
             System.out.println(s1.marks[i]);
         }
@@ -32,12 +34,24 @@ class Student{
     String password;
     int marks[];
 
-    //copy constructor
+    //shallo copy constructor
+    // Student(Student s1){
+    //     marks=new int[3];
+    //     this.name=s1.name;
+    //     this.rollno=s1.rollno;
+    //     this.marks=s1.marks;
+    // }
+
+    
+    //deep copy constructor
     Student(Student s1){
         marks=new int[3];
         this.name=s1.name;
         this.rollno=s1.rollno;
-        this.marks=s1.marks;
+        for(int i=0; i<marks.length; i++){
+            this.marks[i]=s1.marks[i];
+        }
+
     }
     Student(){
         System.out.println("Constructor is called...");
