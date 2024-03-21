@@ -1,6 +1,7 @@
 public class F6_abstraction {
     public static void main(String[] args) {
         Child c1=new Child();
+        //boy-->child--constructor is called.
         c1.city();
         c1.mark();
         c1.name();
@@ -10,9 +11,13 @@ public class F6_abstraction {
     }
 }
 abstract class Boy{
-    String color;
+    String color="skin color";
+    //constructor
+    // Boy(){
+    //     color="skin color";
+    // }
     Boy(){
-        color="skin color";
+        System.out.println("boy constructor is called.");
     }
     abstract void name();
     abstract void mark();
@@ -21,6 +26,9 @@ abstract class Boy{
     }
 }
 class Child extends Boy{
+    Child(){
+        System.out.println("boy constructor is called.");
+    }
     void changeColor(){
         String color="black";
         System.out.println(color);
