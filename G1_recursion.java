@@ -45,6 +45,16 @@ public class G1_recursion {
         int fiboseq=fibo(n-1)+fibo(n-2);
         return fiboseq;
     }
+    //print array is sorted or not ------
+    public static boolean isSorted(int arr[],int i){
+        if(i==arr.length-1){
+            return true;
+        }
+        if(arr[i]>arr[i+1]){
+            return false;
+        }
+        return isSorted(arr, i+1);
+    }
     public static void main(String[] args) {
        //print 1 to n numbers in reverse order-----
        int a=10;
@@ -67,6 +77,11 @@ public class G1_recursion {
         //print fibonacii series-----
         int f=7;
         System.out.println(fibo(f));
+
+        //print array is sorted or not ------
+        int arr[]={1,2,3,4,5,6};
+        System.out.println(isSorted(arr, 0));
+
        
 
     }
