@@ -55,6 +55,18 @@ public class G1_recursion {
         }
         return isSorted(arr, i+1);
     }
+
+    //print index of element if exist in array
+    public static int EleInd(int arr[],int i,int key){
+        if(i==arr.length){
+            return -1;
+        }
+        if(arr[i]== key){
+            System.out.println(key+" is present at index "+i);
+            return i;  
+        }
+        return EleInd(arr, i+1, key);
+    }
     public static void main(String[] args) {
        //print 1 to n numbers in reverse order-----
        int a=10;
@@ -81,6 +93,10 @@ public class G1_recursion {
         //print array is sorted or not ------
         int arr[]={1,2,3,4,5,6};
         System.out.println(isSorted(arr, 0));
+
+        //print index of element if exist in array
+        int arr1[]={1,2,3,4,5,6};
+        System.out.println(EleInd(arr1, 0,6));
 
        
 
