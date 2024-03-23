@@ -86,6 +86,18 @@ public class G1_recursion {
         }
         return x *power(x, n-1);
     }
+    //optimised solution for power ----
+    public static int optPower(int a,int n){
+        if(n==0){
+            return 1;
+        }
+        int half=optPower(a, n/2);
+        int halfSqr=half*half;
+        if(n%2!=0){
+            halfSqr=a * halfSqr;
+        }
+        return halfSqr;
+    }
     public static void main(String[] args) {
        //print 1 to n numbers in reverse order-----
        int a=10;
@@ -123,6 +135,10 @@ public class G1_recursion {
 
        //print x raised to power value-----
        System.out.println(power(2, 2));
+
+       //optimised solution for power ----
+       System.out.println(optPower(2, 5));
+
 
     }
 }
