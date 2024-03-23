@@ -98,6 +98,20 @@ public class G1_recursion {
         }
         return halfSqr;
     }
+    //tilling problem------
+    public static int tillingProblem(int n){
+        if(n==0 || n==1){
+            return 1;
+        }
+        //horizontal
+        int hori=tillingProblem(n-2);
+        
+        //vertical
+        int vert=tillingProblem(n-1);
+
+        int total=hori+vert;
+        return total;
+    }
     public static void main(String[] args) {
        //print 1 to n numbers in reverse order-----
        int a=10;
@@ -139,6 +153,10 @@ public class G1_recursion {
        //optimised solution for power ----
        System.out.println(optPower(2, 5));
 
+       //tilling problem------
+        System.out.println(tillingProblem(3));
+
+        //remove duplicates from string------
 
     }
 }
