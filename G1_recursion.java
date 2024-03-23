@@ -112,6 +112,21 @@ public class G1_recursion {
         int total=hori+vert;
         return total;
     }
+    //remove duplicates from string------
+    public static void removeDuplicate(String str, int idx, StringBuilder newstr, boolean map[]){
+        if(idx ==str.length()){
+            System.out.println(newstr);
+            return;
+        }
+        //kam
+        char curr=str.charAt(idx);
+        if(map[curr-'a']==true){
+            removeDuplicate(str, idx+1, newstr, map);
+        }else{
+            map[curr-'a']=true;
+            removeDuplicate(str, idx+1, newstr.append(curr), map);
+        }
+    }
     public static void main(String[] args) {
        //print 1 to n numbers in reverse order-----
        int a=10;
@@ -157,6 +172,8 @@ public class G1_recursion {
         System.out.println(tillingProblem(3));
 
         //remove duplicates from string------
+        String str="rrrrkkkkk";
+        removeDuplicate(str, 0, new StringBuilder(""), new boolean[26]);
 
     }
 }
