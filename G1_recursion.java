@@ -118,7 +118,7 @@ public class G1_recursion {
             System.out.println(newstr);
             return;
         }
-        //kam
+        
         char curr=str.charAt(idx);
         if(map[curr-'a']==true){
             removeDuplicate(str, idx+1, newstr, map);
@@ -126,6 +126,23 @@ public class G1_recursion {
             map[curr-'a']=true;
             removeDuplicate(str, idx+1, newstr.append(curr), map);
         }
+    }
+
+    //friends pairing problem-----
+    public static int friendParing(int n){
+        if(n==1 || n==0){
+            return 1;
+        }
+        //single pairing
+        // int single=friendParing(n-1);
+
+        // //double pairing
+        // int pair=friendParing(n-2);
+        // int doublepair=(n-1)*pair;
+
+        // int totalpairs=single+doublepair;
+        // return totalpairs;
+        return friendParing(n-1)+(n-1)*friendParing(n-2);
     }
     public static void main(String[] args) {
        //print 1 to n numbers in reverse order-----
@@ -174,6 +191,10 @@ public class G1_recursion {
         //remove duplicates from string------
         String str="rrrrkkkkk";
         removeDuplicate(str, 0, new StringBuilder(""), new boolean[26]);
+
+        //friends pairing problem----------
+        System.out.println(friendParing(3));
+
 
     }
 }
