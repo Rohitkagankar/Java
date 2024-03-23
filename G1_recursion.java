@@ -67,6 +67,18 @@ public class G1_recursion {
         }
         return EleInd(arr, i+1, key);
     }
+
+    //print last occurance of number----
+    public static int lastIndx(int arr[],int key,int i){
+        if(i==arr.length){
+            return -1;
+        }
+        int isfound=lastIndx(arr, key, i+1);
+        if(isfound==-1 && arr[i]==key){
+            return i;
+        }
+        return isfound;
+    }
     public static void main(String[] args) {
        //print 1 to n numbers in reverse order-----
        int a=10;
@@ -98,7 +110,9 @@ public class G1_recursion {
         int arr1[]={1,2,3,4,5,6};
         System.out.println(EleInd(arr1, 0,6));
 
-       
+       //print last occurance of number----
+       int arr2[]={1,2,3,4,5,6,5,0,5,7};
+       System.out.println(lastIndx(arr2, 5, 0));
 
     }
 }
