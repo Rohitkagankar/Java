@@ -79,6 +79,13 @@ public class G1_recursion {
         }
         return isfound;
     }
+    //print x raised to power value-----
+    public static int power(int x,int n){
+        if(n==0){
+            return 1;
+        }
+        return x *power(x, n-1);
+    }
     public static void main(String[] args) {
        //print 1 to n numbers in reverse order-----
        int a=10;
@@ -113,6 +120,9 @@ public class G1_recursion {
        //print last occurance of number----
        int arr2[]={1,2,3,4,5,6,5,0,5,7};
        System.out.println(lastIndx(arr2, 5, 0));
+
+       //print x raised to power value-----
+       System.out.println(power(2, 2));
 
     }
 }
