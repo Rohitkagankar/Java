@@ -18,12 +18,32 @@ public class G1_recursion {
         recInc(n-1);
         System.out.print(n+" ");
     }
+
+    //print factorial of given number-----
     public static int fact(int n){
         if(n==0){
             return 1;
         }
         int fa=n * fact(n-1);
         return fa;
+    }
+    //print sum of n natural numbers------
+    public static int sum(int n){
+        if(n==1){
+            return 1;
+        }
+        int sum=n+sum(n-1);
+        return sum;
+    }
+
+    //print fibonacii series-----
+    public static int fibo(int n){
+        if(n==0 || n==1){
+            return n;
+        }
+        
+        int fiboseq=fibo(n-1)+fibo(n-2);
+        return fiboseq;
     }
     public static void main(String[] args) {
        //print 1 to n numbers in reverse order-----
@@ -34,11 +54,21 @@ public class G1_recursion {
        //print 1 to n numbers-----
        int b=15;
        recInc(b);
-
        System.out.println();
+
        //print factorial of given number-----
        int n=5;
-       System.out.println(fact(n));
+       System.out.println("factorial is "+fact(n));
+
+       //print sum of n natural numbers------
+       int p=5;
+       System.out.println("sum is "+sum(p));
+
+        //print fibonacii series-----
+        int f=7;
+        System.out.println(fibo(f));
+       
+
     }
 }
 
