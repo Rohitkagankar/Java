@@ -144,6 +144,17 @@ public class G1_recursion {
         // return totalpairs;
         return friendParing(n-1)+(n-1)*friendParing(n-2);
     }
+    //print binary string (not consecutive one's)------
+    public static void printBinary(int n, int last, String str){
+        if(n==0){
+            System.out.println(str);
+            return;
+        }
+        printBinary(n-1, 0, str+'0');
+        if(last==0){
+            printBinary(n-1, 1, str+'1');
+        }
+    }
     public static void main(String[] args) {
        //print 1 to n numbers in reverse order-----
        int a=10;
@@ -195,7 +206,9 @@ public class G1_recursion {
         //friends pairing problem----------
         System.out.println(friendParing(3));
 
-
+        //print binary string (not consecutive one's)------
+        printBinary(3, 0, "");
+        printBinary(5, 0, "");
     }
 }
 
