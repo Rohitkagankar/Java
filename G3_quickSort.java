@@ -40,6 +40,8 @@ public class G3_quickSort {
         int arr[]={6,3,9,8,2,5};
         quickSort(arr, 0, arr.length-1);
         printArr(arr);
+        quickSort(arr, 1, arr.length-2);
+        printArr(arr);
 
     }
 }
