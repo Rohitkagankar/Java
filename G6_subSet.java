@@ -1,4 +1,4 @@
-public class G6_subString {
+public class G6_subSet {
     public static void findSubsets(String str, String ans, int i){
         //base case
         if(i==str.length()){
