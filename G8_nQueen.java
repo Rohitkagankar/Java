@@ -25,6 +25,7 @@ public class G8_nQueen {
         //base
         if(row==board.length){
             printBoard(board);
+            count++;
             return;
         }
         //recorsion
@@ -37,6 +38,26 @@ public class G8_nQueen {
             
         }
     }
+    public static boolean nQueens(char board[][],int row){
+        //base
+        if(row==board.length){
+            printBoard(board);
+            
+            return true;
+        }
+        //recorsion
+        for(int j=0; j<board.length; j++){
+            if(isSafe(board, row, j)){
+                board[row][j]='Q';
+                if(nQueens(board, row+1)){
+                    return true;
+                } //function call
+                board[row][j]='x';  
+            }
+            
+        }
+        return false;
+    }
     public static void printBoard(char board[][]){
         System.out.println("---------chess board--------");
         for(int i=0; i<board.length; i++){
@@ -46,6 +67,7 @@ public class G8_nQueen {
             System.out.println();
         }
     }
+    static int count=0;
     public static void main(String[] args) {
         int n=4;
         char board [][]=new char[n][n];
@@ -56,5 +78,12 @@ public class G8_nQueen {
             }
         }
         nQueen(board, 0);
+        System.out.println("the number of ways are = "+ count);
+        if(nQueens(board, 0)){
+            System.out.println("Solution is possible");
+            printBoard(board);
+        }else{
+            System.out.println("Solution is not possible");
+        }
     }
 }
