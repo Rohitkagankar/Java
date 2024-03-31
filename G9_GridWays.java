@@ -16,3 +16,4 @@ public class G9_GridWays {
         System.out.println(gridWays(0, 0, row, col));
     }
 }
+//formula for linear time is (n-1 + m-1)!/(n-1)!*(m-1)!

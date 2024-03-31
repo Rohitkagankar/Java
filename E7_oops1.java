@@ -23,6 +23,7 @@ public class E7_oops1 {
 }
 class BankDetails{
     public String name;
+    @SuppressWarnings("unused")
     private String password;
     public void setPassword(String password) {
         this.password=password;

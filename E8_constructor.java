@@ -3,7 +3,9 @@ public class E8_constructor {
 
 
         Student s1=new Student();
+        @SuppressWarnings("unused")
         Student s2=new Student("rohit");
+        @SuppressWarnings("unused")
         Student s3=new Student(123);
 
         s1.name="ranjit";

@@ -1,4 +1,5 @@
 public class F8_static {
+    @SuppressWarnings("static-access")
     public static void main(String[] args) {
         Student s1=new Student();
         s1.schoolname="jspm";
