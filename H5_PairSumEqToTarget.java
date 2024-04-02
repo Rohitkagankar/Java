@@ -25,8 +25,7 @@ public class H5_PairSumEqToTarget {
             }
             if(list.get(fidx)+list.get(lidx) < target){
                 fidx++;
-            }
-            if(list.get(fidx)+list.get(lidx) > target){
+            }else{
                 lidx--;
             }
             
