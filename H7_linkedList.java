@@ -42,7 +42,7 @@ public class H7_linkedList {
         //tail=newNode
         tail=newNode;
     }
-    //print linked list
+    //print linked list O(n)
     public void printList(){
         if(head==null){
             System.out.println("empty linked list.");
@@ -55,12 +55,25 @@ public class H7_linkedList {
         }
         System.out.println("null");
     }
+    //add a node at perticular index
+    public void add(int idx, int data){
+        Node newNode=new Node(data);
+        Node temp=head;
+        int index=0;
+        while (index<idx-1) {
+            temp=temp.next;
+            index++;      
+        }
+        newNode.next=temp.next;
+        temp.next=newNode;
+    }
     public static void main(String[] args) {
         H7_linkedList l1=new H7_linkedList();
         l1.addFirst(2);
         l1.addFirst(1);
         l1.addLast(3);
         l1.addLast(4);
+        l1.add(2,12);
         l1.printList();
 
     }
