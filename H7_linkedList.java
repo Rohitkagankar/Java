@@ -27,10 +27,41 @@ public class H7_linkedList {
         //head=newNode
         head=newNode;
     }
+
+    //add last node O(n)
+    public void addLast(int data){
+        //create node
+        Node newNode= new Node(data);
+        if(head==null){
+            head=tail=newNode;
+            return;
+        }
+        //tail->next = newnode
+        tail.next=newNode;
+        
+        //tail=newNode
+        tail=newNode;
+    }
+    //print linked list
+    public void printList(){
+        if(head==null){
+            System.out.println("empty linked list.");
+            return;
+        }
+        Node temp=head;
+        while (temp!=null) {
+            System.out.print(temp.data+"=>");
+            temp=temp.next;            
+        }
+        System.out.println("null");
+    }
     public static void main(String[] args) {
         H7_linkedList l1=new H7_linkedList();
-        l1.addFirst(1);
         l1.addFirst(2);
+        l1.addFirst(1);
+        l1.addLast(3);
+        l1.addLast(4);
+        l1.printList();
 
     }
 }
