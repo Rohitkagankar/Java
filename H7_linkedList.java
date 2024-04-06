@@ -57,6 +57,10 @@ public class H7_linkedList {
     }
     //add a node at perticular index
     public void add(int idx, int data){
+        if(idx==0){
+            addFirst(data);
+            return;
+        }
         Node newNode=new Node(data);
         Node temp=head;
         int index=0;
