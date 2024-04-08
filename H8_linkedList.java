@@ -124,7 +124,23 @@ public class H8_linkedList {
         }
         return -1;
     }
+    public static int recHelper(Node head, int key){
+        if(head == null){
+            return -1;
+        }
+        if(head.data==key){
+            return 0;
+        }
+        int idx=recHelper(head.next,key);
+        if(idx == -1){
+            return -1;
+        }
+        return idx+1;
+    }
     
+    public static int recSearch(int key){
+        return recHelper(head,key);
+    }
 
     public static void main(String[] args) {
         H8_linkedList l1=new H8_linkedList();
@@ -134,11 +150,12 @@ public class H8_linkedList {
         l1.addLast(5);
         l1.add(2,3);
         l1.printList();
-        System.out.println(size);
-        System.out.println(l1.removefirst());
-        System.out.println(l1.removeLast());
+        // System.out.println(size);
+        // System.out.println(l1.removefirst());
+        // System.out.println(l1.removeLast());
         l1.printList();
         System.out.println(iteSearch(2));
+        System.out.println(recSearch(3));
     }
     
 }
