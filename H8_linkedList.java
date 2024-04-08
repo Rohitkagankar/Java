@@ -74,6 +74,43 @@ public class H8_linkedList {
         newNode.next=temp.next;
         temp.next=newNode;
     }
+    public int removefirst(){
+        if(size==0){
+            System.out.println("LL is empty.");
+            return Integer.MIN_VALUE;
+        }else if(size==1){
+            int val =head.data;
+            head=tail=null;
+            size=0;
+            return val;
+            
+        }
+        int val = head.data;
+        head=head.next;
+        size--;
+        return val;
+        
+    }
+    public int removeLast(){
+        if (size==0) {
+            System.out.println("ll is empty.");
+        }else if(size==1){
+            int val = head.data;
+            head= tail= null;
+            size=0;
+            return val;
+        }
+        Node prev=head;
+        for(int i=0; i<size-2; i++){
+            prev=prev.next;
+        }
+        int val=prev.next.data;
+        prev.next=null;
+        size--;
+        tail=prev;
+        return val;
+    }
+    
 
     public static void main(String[] args) {
         H8_linkedList l1=new H8_linkedList();
@@ -84,6 +121,9 @@ public class H8_linkedList {
         l1.add(2,3);
         l1.printList();
         System.out.println(size);
+        System.out.println(l1.removefirst());
+        System.out.println(l1.removeLast());
+        l1.printList();
     }
     
 }
