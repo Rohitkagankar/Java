@@ -110,6 +110,20 @@ public class H8_linkedList {
         tail=prev;
         return val;
     }
+
+    //search key at node index and return index---
+    public static int iteSearch(int key){
+        Node temp =head;
+        int i=0;
+        while (temp !=null) {
+            if(temp.data==key){
+                return i;
+            }
+            temp=temp.next;
+            i++;   
+        }
+        return -1;
+    }
     
 
     public static void main(String[] args) {
@@ -124,6 +138,7 @@ public class H8_linkedList {
         System.out.println(l1.removefirst());
         System.out.println(l1.removeLast());
         l1.printList();
+        System.out.println(iteSearch(2));
     }
     
 }
