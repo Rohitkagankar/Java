@@ -1,3 +1,4 @@
+//size of linked list---
 public class H8_linkedList {
     public static class Node {
         int data;
@@ -8,15 +9,15 @@ public class H8_linkedList {
             this.next=null;
         }
     
-        
     }
     public static Node head;
     public static Node tail;
-
+    public static int  size;
     //add first O(n)
     public void addFirst(int data){
         //create newnode
         Node newNode= new Node(data);
+        size++;
         if(head==null){
             head=tail=newNode;
             return;
@@ -32,6 +33,7 @@ public class H8_linkedList {
     public void addLast(int data){
         //create node
         Node newNode= new Node(data);
+        size++;
         if(head==null){
             head=tail=newNode;
             return;
@@ -62,6 +64,7 @@ public class H8_linkedList {
             return;
         }
         Node newNode=new Node(data);
+        size++;
         Node temp=head;
         int index=0;
         while (index<idx-1) {
@@ -74,12 +77,13 @@ public class H8_linkedList {
 
     public static void main(String[] args) {
         H8_linkedList l1=new H8_linkedList();
-        l1.addFirst(6);
-        l1.addFirst(5);
-        l1.addLast(7);
-        l1.addLast(8);
-        l1.add(2,12);
+        l1.addFirst(2);
+        l1.addFirst(1);
+        l1.addLast(4);
+        l1.addLast(5);
+        l1.add(2,3);
         l1.printList();
+        System.out.println(size);
     }
     
 }
