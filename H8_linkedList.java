@@ -145,7 +145,7 @@ public class H8_linkedList {
         return recHelper(head,key);
     }
 
-    //reverse linkedlist
+    //reverse linkedlist O(n)
     public static void revlinkedlist(){
         Node prev=null;
         Node curr=head;
@@ -159,6 +159,30 @@ public class H8_linkedList {
         }
         head=prev;
 
+    }
+
+    //delete nth from end
+    public static void delnthFromEnd(int n){
+        //fint size(length)
+        int sz=0;
+        Node temp=head;
+        while (temp !=null) {
+            temp=temp.next;
+            sz++;
+        }
+        if(sz==n){
+            head=head.next;
+            return;
+        }
+        int i=1;
+        int tofind=sz-n;
+        Node prev=head;
+        while (i<tofind) {
+            prev=prev.next;
+            i++;
+        }
+        prev.next=prev.next.next;
+        return;
     }
 
     public static void main(String[] args) {
@@ -176,6 +200,8 @@ public class H8_linkedList {
         System.out.println(iteSearch(2));
         System.out.println(recSearch(3));
         l1.revlinkedlist();
+        l1.printList();
+        l1.delnthFromEnd(2);
         l1.printList();
     }
     
