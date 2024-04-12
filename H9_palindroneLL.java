@@ -91,5 +91,15 @@ public class H9_palindroneLL {
         l1.addFirst(1);
         l1.printLList();
         System.out.println(l1.isPalindron());
+        H9_palindroneLL l2=new H9_palindroneLL();
+        l2.addFirst(5);
+        l2.addFirst(6);
+        l2.addFirst(7);
+        l2.addFirst(8);
+        l2.addFirst(9);
+        l2.addFirst(10);
+        l2.printLList();
+        System.out.println(l2.isPalindron());
+        
     }
 }
