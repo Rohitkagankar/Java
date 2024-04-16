@@ -54,6 +54,14 @@ public class I2_removeCycle {
         //make tail of next null
         prev.next=null;
     }
+    public static void printLL(){
+        Node temp=head;
+        while (temp != null) {
+            System.out.print(temp.data+ "->");
+            temp=temp.next;  
+        }
+        System.out.println();
+    }
     public static void main(String[] args) {
         head=new Node(1);
         Node temp=new Node(2);
@@ -64,6 +72,8 @@ public class I2_removeCycle {
         System.out.println(isCycle());
         removeCycle();
         System.out.println(isCycle());
+        printLL();
+
 
     }
 }
