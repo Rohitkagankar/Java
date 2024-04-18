@@ -9,6 +9,8 @@ public class I3_JCF_linkedlist {
         System.out.println(l1);
         l1.removeLast();
         l1.removeFirst();
+        l1.addFirst(4);
+        l1.addLast(6);
         System.out.println(l1);
     }
 }
