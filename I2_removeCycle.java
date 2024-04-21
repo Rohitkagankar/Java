@@ -46,7 +46,7 @@ public class I2_removeCycle {
         Node prev=null;
         slow=head;
         while (slow!=fast) {
-            prev=slow;
+            prev=fast;
             slow=slow.next;
             fast=fast.next;            
         }
