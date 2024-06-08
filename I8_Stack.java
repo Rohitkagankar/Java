@@ -1,3 +1,4 @@
+//implementation of stack using Arraylist-------
 import java.util.*;
 public class I8_Stack {
     public static class Stack{
