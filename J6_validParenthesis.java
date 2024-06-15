@@ -35,6 +35,7 @@ public class J6_validParenthesis {
             if(curr==')'){
                 int count=0;
                 while(s.pop() != '('){
+                    
                     count++;
                 }
                 if(count<1){
